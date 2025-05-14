@@ -11,10 +11,8 @@ const Video = () => {
     offset: ["start start", "end start"],
   });
 
-  // Scale from small to full size (1 to 3)
   const scale = useTransform(scrollYProgress, [0, 0.5], [0.3, 1]);
 
-  // Text animation from sides
   const leftTextX = useTransform(scrollYProgress, [0, 0.5], ["-100%", "0%"]);
   const rightTextX = useTransform(scrollYProgress, [0, 0.5], ["100%", "0%"]);
 

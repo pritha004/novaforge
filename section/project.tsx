@@ -1,4 +1,4 @@
-import ProjectScroll from "../component/projects-scroll";
+import { ProjectScroll } from "@/component";
 
 export default function Project() {
   return (
