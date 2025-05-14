@@ -11,7 +11,7 @@ const Contact = () => {
         </h2>
         <p className="my-4 text-[calc(1rem+0.1vw)] text-neutral-400 text-center uppercase flex flex-col">
           <span className="">
-            Ready to bring your ideas to life? Whether you're looking for a
+            Ready to bring your ideas to life? Whether you&apos;re looking for a
             simple
           </span>
           <span className="">

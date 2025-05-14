@@ -20,7 +20,7 @@ const Projects = () => {
         </Link>
         <p className="my-4 text-[calc(1rem+0.1vw)] text-neutral-400 text-center uppercase flex flex-col">
           <span className="flex items-center">
-            Let's Build the Next Big Thing
+            Let&apos;s Build the Next Big Thing
             <span className="text-white px-2 font-bold">⇧</span>
           </span>
         </p>
