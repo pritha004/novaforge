@@ -1,0 +1,64 @@
+@import "tailwindcss";
+
+a,
+button,
+input,
+textarea {
+  cursor: none !important;
+}
+
+:root {
+  --font-plaster: 'Plaster', sans-serif;
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+.font-plaster {
+  font-family: var(--font-plaster);
+}
+
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+@keyframes marquee {
+  0% {
+    transform: translateX(0%);
+  }
+
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.marquee-wrapper {
+  display: flex;
+  overflow: hidden;
+  position: relative;
+}
+
+.marquee-content {
+  display: flex;
+  animation: marquee 20s linear infinite;
+}
+
+.marquee-wrapper:hover .marquee-content {
+  animation-play-state: paused;
+}
