@@ -11,10 +11,9 @@ export default function ContactForm() {
     e.preventDefault();
 
     const form = e.currentTarget;
-    const formData = new FormData(form);
 
-    const email = formData.get("email") as string;
-    if (!email || !/\S+@\S+\.\S+/.test(email)) {
+    if (!form.checkValidity()) {
+      form.reportValidity();
       return;
     }
 
@@ -33,6 +32,7 @@ export default function ContactForm() {
           Let’s Create Something Amazing Together
         </h2>
         <form
+          noValidate
           onSubmit={handleSubmit}
           className="flex flex-col justify-center items-center gap-8 w-full"
         >
@@ -49,6 +49,7 @@ export default function ContactForm() {
               type="email"
               name="email"
               placeholder="Your Email"
+              required
               className="border-0 bg-transparent placeholder:font-medium text-medium text-white placeholder:text-neutral-400 outline-none"
             />
           </div>
@@ -60,13 +61,8 @@ export default function ContactForm() {
               className="border-0 bg-transparent w-full placeholder:font-medium text-medium text-white placeholder:text-neutral-400 outline-none resize-none"
             />
           </div>
-          <button
-            type="submit"
-            className="border-white px-4 py-2 border rounded-[20px] text-base text-white"
-          >
-            Send Message
-          </button>
-          {sent && (
+
+          {sent ? (
             <motion.span
               initial={{ opacity: 0 }}
               whileInView={{ opacity: 1 }}
@@ -79,6 +75,13 @@ export default function ContactForm() {
             >
               Your message has been sent!
             </motion.span>
+          ) : (
+            <button
+              type="submit"
+              className="border-white px-4 py-2 border rounded-[20px] text-base text-white"
+            >
+              Send Message
+            </button>
           )}
         </form>
       </section>

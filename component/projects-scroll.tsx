@@ -33,7 +33,7 @@ export default function ProjectScroll() {
                     } `}
                   >
                     <div>
-                      <div className="relative h-[200px] md:h-[300px] w-[350px] md:w-[700px] mb-4">
+                      <div className="relative h-[200px] md:h-[300px] w-[200px] sm:w-[350px] md:w-[450px] lg:w-[700px] mb-4">
                         <Image
                           src={project.src}
                           alt={project.title}

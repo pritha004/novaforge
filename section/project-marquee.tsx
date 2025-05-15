@@ -24,7 +24,7 @@ export default function ProjectMarquee() {
         <Link
           href={"/projects"}
           className={`border-[1px] border-white 
-                rounded-full px-4 py-2 text-white cursor-none`}
+                rounded-full px-6 py-2 text-white cursor-none`}
         >
           See All
         </Link>
@@ -33,21 +33,19 @@ export default function ProjectMarquee() {
       <div className="overflow-hidden whitespace-nowrap w-full  py-4">
         <div className="marquee-wrapper">
           <div className="marquee-content">
-            {PROJECTS.flat()
-              .slice(4)
-              .map((project, index) => (
-                <div
-                  className="relative h-[200px] md:h-[400px] w-[350px] md:w-[700px] mb-4 inline-block m-4"
-                  key={index}
-                >
-                  <Image
-                    src={project.src}
-                    alt={project.title}
-                    fill
-                    className="object-cover rounded"
-                  />
-                </div>
-              ))}
+            {PROJECTS.flat().map((project, index) => (
+              <div
+                className="relative h-[200px] md:h-[400px] w-[350px] md:w-[700px] mb-4 inline-block m-4"
+                key={index}
+              >
+                <Image
+                  src={project.src}
+                  alt={project.title}
+                  fill
+                  className="object-cover rounded"
+                />
+              </div>
+            ))}
           </div>
         </div>
       </div>

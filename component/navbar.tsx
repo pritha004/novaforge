@@ -38,7 +38,7 @@ export const Navbar = () => {
                   <Link
                     href={route.path}
                     onClick={() => setIsOpen(false)}
-                    className={`text-[4rem] font-plaster text-white cursor-none`}
+                    className={`text-[2rem] md:text-[4rem] font-plaster text-white cursor-none`}
                   >
                     {route.title}
                   </Link>
