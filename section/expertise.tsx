@@ -14,6 +14,7 @@ export default function Expertise() {
           autoPlay
           loop
           muted
+          playsInline
         />
 
         <motion.h2

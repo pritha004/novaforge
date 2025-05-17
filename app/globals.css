@@ -24,6 +24,12 @@ body {
   font-family: Arial, Helvetica, sans-serif;
 }
 
+@layer base {
+  video::-webkit-media-controls {
+    display: none !important;
+  }
+}
+
 @keyframes marquee {
   0% {
     transform: translateX(0%);

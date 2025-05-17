@@ -31,6 +31,7 @@ const Video = () => {
             src="/videos/craftive.mp4"
             autoPlay
             loop
+            playsInline
             muted
           />
         </motion.div>
